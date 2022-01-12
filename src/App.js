@@ -13,12 +13,12 @@ import './style.css';
 const testData = [
   {
     name: 'Dan Abramov',
-    avatar_url: 'https://avatars.githubusercontent.com/u/810438?v=4',
+    avatar_url: 'https://avatars.githubusercontent.com/u/51234?v=4',
     company: '@facebook ',
   },
   {
     name: 'dharm',
-    avatar_url: 'https://avatars.githubusercontent.com/u/72696?v=4',
+    avatar_url: 'https://avatars.githubusercontent.com/u/52696?v=4',
     company: '@instagram',
   },
 ];
@@ -67,12 +67,21 @@ class Card extends React.Component {
 }
 
 class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     profile: testData,
+  //   };
+  // }
+
+  state = { profile: testData };
+
   render() {
     return (
       <div>
         <div className="header">{this.props.title}</div>
         <Form />
-        <CardList profile={testData} />
+        <CardList profile={this.state.profile} />
       </div>
     );
   }
