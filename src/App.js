@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 // export default function App() {
 //   return (
@@ -12,15 +12,15 @@ import './style.css';
 
 const testData = [
   {
-    name: 'Dan Abramov',
-    avatar_url: 'https://avatars.githubusercontent.com/u/51234?v=4',
-    company: '@facebook ',
+    name: "Dan Abramov",
+    avatar_url: "https://avatars.githubusercontent.com/u/51234?v=4",
+    company: "@facebook "
   },
   {
-    name: 'dharm',
-    avatar_url: 'https://avatars.githubusercontent.com/u/52696?v=4',
-    company: '@instagram',
-  },
+    name: "dharm",
+    avatar_url: "https://avatars.githubusercontent.com/u/52696?v=4",
+    company: "@instagram"
+  }
 ];
 
 const CardList = (props) => {
@@ -49,13 +49,13 @@ class Card extends React.Component {
     const profile = this.props;
     return (
       <div>
-        <div className="github-profile" style={{ margin: '1rem' }}>
-          <img src={profile.avatar_url} style={{ width: '25%' }} />
+        <div className="github-profile" style={{ margin: "1rem" }}>
+          <img src={profile.avatar_url} style={{ width: "25%" }} alt="" />
           <div
             className="info"
-            style={{ display: 'inline-block', marginLeft: 10 }}
+            style={{ display: "inline-block", marginLeft: 10 }}
           >
-            <p className="name" style={{ fontSize: '125%' }}>
+            <p className="name" style={{ fontSize: "125%" }}>
               {profile.name}
             </p>
             <div className="company">{profile.company}</div>
